@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StringStore - Tienda de Instrumentos Musicales</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <div class="nav__logo-icon">
+                    <i class="fas fa-guitar"></i>
+                </div>
+                <span class="nav__logo-text">StringStore</span>
+            </div>
+            <div class="nav__search">
+                <i class="fas fa-search nav__search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Buscar guitarras, bajos, baterías...">
+            </div>
+            <button class="nav__cart-btn" id="cartBtn">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Carrito</span>
+                <span class="cart__count" id="cartCount">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__container container">
+            <div class="hero__content">
+                <span class="hero__badge">
+                    <i class="fas fa-star"></i>
+                    Instrumentos de calidad
+                </span>
+                <h1 class="hero__title">Tu música empieza aquí</h1>
+                <p class="hero__subtitle">Descubre los mejores instrumentos musicales al mejor precio. Guitarras, bajos, baterías, teclados y más.</p>
+                <a href="#catalogo" class="hero__btn">
+                    Ver Catálogo
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+            </div>
+            <div class="hero__image">
+                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600" alt="Guitarra eléctrica">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Filters -->
+            <section class="filters" id="catalogo">
+                <div class="filters__header">
+                    <h2 class="filters__title">
+                        <i class="fas fa-music"></i>
+                        Nuestro Catálogo
+                    </h2>
+                    <p class="filters__subtitle">Encuentra el instrumento perfecto para ti</p>
+                </div>
+                <div class="filters__categories">
+                    <button class="filter__btn active" data-category="all">
+                        <i class="fas fa-th-large"></i>
+                        Todos
+                    </button>
+                    <button class="filter__btn" data-category="guitarras">
+                        <i class="fas fa-guitar"></i>
+                        Guitarras
+                    </button>
+                    <button class="filter__btn" data-category="bajos">
+                        <i class="fas fa-guitar"></i>
+                        Bajos
+                    </button>
+                    <button class="filter__btn" data-category="baterias">
+                        <i class="fas fa-drum"></i>
+                        Baterías
+                    </button>
+                    <button class="filter__btn" data-category="teclados">
+                        <i class="fas fa-music"></i>
+                        Teclados
+                    </button>
+                    <button class="filter__btn" data-category="accesorios">
+                        <i class="fas fa-plug"></i>
+                        Accesorios
+                    </button>
+                </div>
+            </section>
+
+            <!-- Products Grid -->
+            <section class="products">
+                <div class="products__grid" id="productsGrid">
+                    <!-- Products will be dynamically generated -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart__overlay" id="cartOverlay"></div>
+    <aside class="cart__sidebar" id="cartSidebar">
+        <div class="cart__header">
+            <h3 class="cart__title">
+                <i class="fas fa-shopping-cart"></i>
+                Carrito de Compras
+            </h3>
+            <button class="cart__close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart__items" id="cartItems">
+            <!-- Cart items will be dynamically generated -->
+        </div>
+        <div class="cart__footer">
+            <div class="cart__total">
+                <span>Total:</span>
+                <span class="cart__total-amount" id="cartTotal">$0</span>
+            </div>
+            <button class="cart__checkout" id="checkoutBtn">
+                <i class="fas fa-credit-card"></i>
+                Finalizar Compra
+            </button>
+        </div>
+    </aside>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
